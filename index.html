@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine 💗</title>
+
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Dancing+Script:wght@500&family=Poppins:wght@400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <h1 class="title">Letter for You</h1>
+  <p class="soft">your name first, handsome ♡</p>
+
+  <input id="nameInput" type="text" placeholder="your name">
+  <button id="startBtn">open 💗</button>
+</div>
+
+<audio id="music" src="music.mp3"></audio>
+
+<script>
+const btn = document.getElementById("startBtn");
+const music = document.getElementById("music");
+
+btn.onclick = () => {
+  const name = document.getElementById("nameInput").value.trim();
+  if (!name) {
+    alert("isi namanya dulu ya 🥺");
+    return;
+  }
+
+  localStorage.setItem("valName", name);
+  music.currentTime = 0;
+  music.play();
+
+  setTimeout(() => {
+    window.location.href = "letter.html";
+  }, 500);
+};
+</script>
+
+</body>
+</html>

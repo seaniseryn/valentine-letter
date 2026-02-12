@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #ffe5f0, #ffd2e7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* CARD */
+.card {
+  background: #fff;
+  width: 90%;
+  max-width: 350px;
+  padding: 26px 22px;
+  border-radius: 26px;
+  text-align: center;
+  box-shadow: 0 22px 40px rgba(255,120,170,0.35);
+  position: relative;
+  z-index: 5;
+}
+
+/* FONTS */
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.soft {
+  font-family: 'Dancing Script', cursive;
+  font-size: 15px;
+  color: #c56c8a;
+  margin-bottom: 16px;
+}
+
+input {
+  font-family: 'Poppins', sans-serif;
+  width: 170px;
+  padding: 10px;
+  border-radius: 14px;
+  border: 1px solid #f2b6c9;
+  margin-bottom: 14px;
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
+  width: 85%;
+  padding: 12px;
+  background: #ff7fa7;
+  border: none;
+  border-radius: 18px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff5f95;
+}
+
+/* LETTER */
+.letter p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+  white-space: pre-line;
+}
+
+/* 🎀 RIBBONS */
+.ribbons {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ribbon {
+  position: absolute;
+  top: -30px;
+  font-size: 20px;
+  animation: fall linear infinite;
+  opacity: 0.85;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
